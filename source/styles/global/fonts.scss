@@ -1,1 +1,26 @@
 /* здесь подключите шрифты*/
+
+@font-face {
+  font-family: "Kodchasan";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/Kodchasan/Kodchasan-Medium.ttf") format("ttf"),
+    url("/fonts/Kodchasan/Kodchasan-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Kodchasan";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/Kodchasan/Kodchasan-SemiBold.ttf") format("ttf"),
+    url("/fonts/Kodchasan/Kodchasan-SemiBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Kodchasan";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/Kodchasan/Kodchasan-Bold.ttf") format("ttf"),
+    url("/fonts/Kodchasan/Kodchasan-Bold.woff2") format("woff2");
+}

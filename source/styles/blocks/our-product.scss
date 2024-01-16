@@ -1,0 +1,30 @@
+.our-product {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  max-width: 1146px;
+  margin: 0 auto;
+  gap: 50px;
+}
+
+.our-product__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.our-product__header {
+  margin-bottom: 0;
+}
+
+.our-product__button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #e58211;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 160%; /* 28.8px */
+  text-decoration-line: underline;
+  align-self: self-end;
+}

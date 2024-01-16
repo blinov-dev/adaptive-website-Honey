@@ -1,0 +1,139 @@
+.preview {
+  position: relative;
+  width: 100%;
+  max-height: 400px;
+  margin: 0 20px;
+  @media (min-width: $width-tablet) {
+    max-width: 1500px;
+    max-height: 865px;
+    margin: 0 50px;
+    margin-bottom: 130px;
+  }
+}
+
+.preview-logo {
+  position: absolute;
+  z-index: 1;
+  top: -70px;
+  left: 90px;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  .preview-logo__svg {
+    opacity: 1;
+    fill: rgba(255, 166, 56, 0.4);
+  }
+}
+
+.preview__decor {
+  position: absolute;
+  top: 16px;
+  left: -50px;
+  z-index: 2;
+  width: 154px;
+  height: 322px;
+  background-image: url("/images/preview/honey-spoon@1x.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  @media (min-resolution: 2dppx) {
+    background-image: url("/images/preview/honey-spoon@2x.png");
+  }
+}
+
+.preview__container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: max-content;
+  border-radius: 30px;
+  background: linear-gradient(76deg, #ff9d2d 1.66%, #ffd877 93.21%);
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 120px;
+    height: 120px;
+    top: 80px;
+    right: 0;
+    background-image: url("/images/preview/preview-promo@1x.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    @media (min-resolution: 2dppx) {
+      background-image: url("/images/preview/preview-promo@2x.png");
+    }
+    @media (min-width: $width-tablet) {
+      top: 120px;
+      margin-left: 177px;
+      margin-bottom: 120px;
+    }
+  }
+
+}
+
+.preview-text {
+  position: relative;
+  z-index: 2;
+  color: #0b0b0b;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  text-align: left;
+  @media (min-width: $width-tablet) {
+    font-size: 100px;
+    margin-top: 182px;
+  }
+  .preview-text__second-word {
+    margin-left: 40px;
+    @media (min-width: $width-tablet) {
+      margin-left: 87px;
+    }
+  }
+  .preview-text__third-word {
+    position: relative;
+    padding-left: 80px;
+    @media (min-width: $width-tablet) {
+      padding-left: 294px;
+     }
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      width: 75px;
+      height: 1px;
+      bottom: 5px;
+      left: 0;
+      background-color: #000;
+      opacity: 0.5;
+      @media (min-width: $width-tablet) {
+        width: 100px;
+        height: 2px;
+        width: 274px;
+        bottom: 25px;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      width: 60px;
+      height: 30px;
+      bottom: 10px;
+      left: 0;
+      background-image: url("/images/preview/preview-bee@1x.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      @media (min-resolution: 2dppx) {
+        background-image: url("/images/preview/preview-bee@2x.png");
+      }
+      @media (min-width: $width-tablet) {
+        width: 190px;
+      }
+    }
+  }
+}
+
+.preview-links {
+  display: grid;
+  gap: 30px;

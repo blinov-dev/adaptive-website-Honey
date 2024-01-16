@@ -1,0 +1,27 @@
+.text-block {
+  display: flex;
+  flex-direction: column;
+  max-width: 548px;
+  margin-top: 100px;
+}
+.text-block__header {
+  text-align: left;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 145%; /* 65.25px */
+  margin-bottom: 30px;
+}
+.text-block__description {
+  text-align: left;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 160%; /* 35.2px */
+  margin-bottom: 50px;
+}
+.text-block__link {
+  max-width: max-content;
+  cursor: pointer;
+  padding: 15px 40px;
+  background: #e58311;
+  color: #fff;
+}

@@ -1,0 +1,25 @@
+.trusted-shops {
+  display: flex;
+  flex-direction: column;
+  margin: 0 170px;
+  margin-bottom: 130px;
+}
+
+.trusted-shops__header {
+  text-align: left;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 160%; /* 72px */
+  margin-bottom: 50px;
+}
+
+.trusted-shops__list {
+display: flex;
+justify-content: space-between;
+}
+
+.trusted-shops__logo {
+  fill: #A7A7A7;
+}
+
+

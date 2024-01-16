@@ -1,0 +1,192 @@
+// Стили для основного хедера
+.main-header {
+  display: flex;
+  justify-content: space-around;
+  margin: 25px;
+  align-items: center;
+  position: relative;
+}
+
+.main-logo {
+  margin-right: auto;
+  &:hover {
+    opacity: 60%;
+  }
+  &:active {
+    opacity: 30%;
+  }
+  @media (min-width: $width-tablet) {
+    margin-left: 100px;
+  }
+  @media (min-width: $width-desktop) {
+    margin-left: 180px;
+  }
+  & .main-logo__svg {
+    width: 45px;
+    height: 20px;
+    fill: #ffa138;
+    @media (min-width: $width-tablet) {
+      max-width: 93px;
+      max-height: 40px;
+    }
+  }
+}
+
+// MENU BURGER
+.main-nav__toggle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: none;
+  background: inherit;
+  cursor: pointer;
+  &:hover {
+    opacity: 60%;
+  }
+  &:active {
+    opacity: 30%;
+  }
+  @media (min-width: $width-tablet) {
+    display: none;
+  }
+}
+// MENU BURGER CLOSED
+.main-nav--closed .toggle-icon {
+  position: absolute;
+  width: 22px;
+  height: 4px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  border-radius: 10px;
+  background-color: #ffa138;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 4px;
+    top: -8px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    background-color: #ffa138;
+    transition: 0.3s all linear;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 4px;
+    top: 8px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    background-color: #ffa138;
+    transition: 0.3s all linear;
+  }
+}
+// MENU BURGER OPEN
+.main-nav--opened .toggle-icon {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 4px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    border-radius: 10px;
+    background-color: #ffa138;
+    transform: rotate(-45deg);
+    transition: 0.3s all linear;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 4px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    border-radius: 10px;
+    background-color: #ffa138;
+    transform: rotate(45deg);
+    transition: 0.3s all linear;
+  }
+}
+
+// Появлению и скрытие основного меню
+@media (min-width: $width-mobile) and (max-width: 767px) {
+  .main-nav--closed .main-nav__list {
+    display: none;
+  }
+}
+
+.main-nav {
+  z-index: 5;
+}
+
+.main-nav__list {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 5px;
+  @media (min-width: $width-tablet) {
+    position: static;
+    display: grid;
+    grid-template-columns: max-content max-content max-content max-content;
+    column-gap: 40px;
+    row-gap: 20px;
+    font-weight: 500;
+  }
+}
+.main-nav--opened .main-nav__list {
+  border-top: 2px solid #ffa138;
+  border-bottom: 2px solid #ffa138;
+  @media (min-width: $width-tablet) {
+    border: none;
+  }
+}
+
+.main-nav__link {
+  &::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffa138;
+    transition: width 0.3s;
+  }
+  &:hover::after {
+    width: 100%;
+  }
+  &:hover {
+    opacity: 60%;
+  }
+  &:active {
+    opacity: 30%;
+  }
+}
+.main-nav__link--current {
+  font-weight: 700;
+}
+
+.main-nav__link:visited {
+  color: #000;
+}

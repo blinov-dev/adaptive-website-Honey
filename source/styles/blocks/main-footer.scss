@@ -1,0 +1,36 @@
+.main-footer {
+  background: linear-gradient(76deg, #ff9d2d 1.66%, #ffd877 93.21%);
+}
+
+.main-footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1145px;
+  margin: 45px auto;
+}
+
+.logo-footer {
+  fill: #000;
+}
+
+.main-footer__text {
+  max-width: 270px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 160%; /* 22.4px */
+}
+
+.socials__list {
+  display: grid;
+  grid-template-columns: max-content max-content max-content max-content;
+  gap: 30px;
+  margin-right: 80px;
+}
+
+.mobile-app__list {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  gap: 15px;
+}
