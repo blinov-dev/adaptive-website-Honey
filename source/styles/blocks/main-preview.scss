@@ -137,3 +137,5 @@
 .preview-links {
   display: grid;
   gap: 30px;
+  grid-template-columns: max-content max-content;
+}
