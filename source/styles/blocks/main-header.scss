@@ -2,12 +2,16 @@
 .main-header {
   display: flex;
   justify-content: space-around;
-  margin: 25px;
+  margin: 20px;
   align-items: center;
   position: relative;
+  @media (min-width: $width-tablet) {
+    margin: 30px 50px;
+  }
 }
 
 .main-logo {
+  margin-left: calc(20px + (180 - 20) * ((100vw - 320px) / (1600 - 320)));
   margin-right: auto;
   &:hover {
     opacity: 60%;
@@ -15,20 +19,10 @@
   &:active {
     opacity: 30%;
   }
-  @media (min-width: $width-tablet) {
-    margin-left: 100px;
-  }
-  @media (min-width: $width-desktop) {
-    margin-left: 180px;
-  }
   & .main-logo__svg {
-    width: 45px;
-    height: 20px;
+    max-width: calc(40px + (93 - 40) * ((100vw - 320px) / (1600 - 320)));
+    max-height: calc(20px + (40 - 20) * ((100vw - 320px) / (1600 - 320)));
     fill: #ffa138;
-    @media (min-width: $width-tablet) {
-      max-width: 93px;
-      max-height: 40px;
-    }
   }
 }
 

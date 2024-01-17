@@ -43,24 +43,32 @@
   <main class="page-main">
     <h1 class="visually-hidden">Honey</h1>
 
-    <div class="preview">
-      <div class="preview__container">
-        <p class="preview-text">
-          <span class="preview-text__first-word preview-text__span">Finger</span><br>
-          <span class="preview-text__second-word preview-text__span">licking</span><br>
-          <span class="preview-text__third-word preview-text__span">honey!</span>
+    <div class="promo">
+      <div class="promo__container">
+        <p class="promo-text">
+          <span class="promo-text__first-word promo-text__span">Finger</span><br>
+          <span class="promo-text__second-word promo-text__span">licking</span><br>
+          <span class="promo-text__third-word promo-text__span">honey!</span>
         </p>
-        <div class="preview-links">
-          <a class="main-link link-buy" href="index.html">Buy Now</a>
-          <a class="main-link link-learn" href="index.html">Learn More</a>
+        <div class="promo-links">
+          <a class="promo-links__link link-buy" href="index.html">Buy Now</a>
+          <a class="promo-links__link link-learn" href="index.html">Learn More</a>
         </div>
       </div>
-      <!-- <span class="preview__decor"></span>
-      <svg class="preview-logo" width="1400" height="611">
-        <use class="preview-logo__svg" href="images/sprite.svg#preview-logo"></use>
-      </svg> -->
+      <div class="promo__img">
+        <picture>
+          <source type="image/webp"
+            srcset="images/promo/promo@1x.webp 1x, images/promo/promo@2x.webp 2x">
+          <img class="promo__img__preview" src="images/promo/promo@1x.png"
+            srcset="images/promo/promo@2x.png 2x" alt="100% honey">
+        </picture>
+      </div>
+        <span class="promo__decor"></span>
+      <svg class="promo-logo" width="1400" height="611">
+        <use class="promo-logo__svg" href="images/sprite.svg#promo-logo"></use>
+      </svg>
     </div>
-<!--
+    <!--
     <section class="main-info">
       <div class="trusted-shops">
         <h2 class="trusted-shops__header">Our Trusted Shops</h2>

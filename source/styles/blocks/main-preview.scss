@@ -1,141 +1,168 @@
-.preview {
+.promo {
   position: relative;
-  width: 100%;
-  max-height: 400px;
-  margin: 0 20px;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  margin: 0 10px;
+  border-radius: calc(10px + (30 - 10) * ((100vw - 320px) / (1600 - 320)));
+  background: linear-gradient(76deg, #ff9d2d 1.66%, #ffd877 93.21%);
   @media (min-width: $width-tablet) {
-    max-width: 1500px;
-    max-height: 865px;
-    margin: 0 50px;
+    margin: 0 25px;
     margin-bottom: 130px;
+  }
+  @media (min-width: $width-desktop) {
+    margin: 0 50px;
+  }
+  @media (min-width: $max-width) {
+    border-radius: 30px;
   }
 }
 
-.preview-logo {
+.promo-logo {
   position: absolute;
   z-index: 1;
-  top: -70px;
-  left: 90px;
+  top: -10px;
+  left: 0;
   bottom: 0;
   right: 0;
   margin: auto;
-  .preview-logo__svg {
+  max-width: calc(300px + (1400 - 300) * ((100vw - 320px) / (1600 - 320)));
+  max-height: calc(111px + (611 - 111) * ((100vw - 320px) / (1600 - 320)));
+  .promo-logo__svg {
     opacity: 1;
     fill: rgba(255, 166, 56, 0.4);
   }
+  @media (min-width: $width-tablet) {
+    top: -50px;
+    left: calc(10px + (70 - 10) * ((100vw - 320px) / (1600 - 320)));
+  }
+  @media (min-width: $width-desktop) {
+    top: -70px;
+  }
 }
 
-.preview__decor {
+.promo__decor {
   position: absolute;
   top: 16px;
-  left: -50px;
+  left: -10px;
   z-index: 2;
-  width: 154px;
-  height: 322px;
-  background-image: url("/images/preview/honey-spoon@1x.png");
+  width: calc(30px + (154 - 30) * ((100vw - 320px) / (1600 - 320)));
+  height: calc(100px + (320 - 100) * ((100vw - 320px) / (1600 - 320)));
+  background-image: url("/images/promo/honey-spoon@1x.png");
   background-repeat: no-repeat;
   background-size: contain;
   @media (min-resolution: 2dppx) {
-    background-image: url("/images/preview/honey-spoon@2x.png");
+    background-image: url("/images/promo/honey-spoon@2x.png");
+  }
+  @media (min-width: $width-tablet) {
+    left: -25px;
+  }
+  @media (min-width: $width-desktop) {
+    left: -50px;
   }
 }
 
-.preview__container {
+.promo__container {
+  position: relative;
+  margin-left: calc(20px + (180 - 20) * ((100vw - 320px) / (1600 - 320)));
+  @media (min-width: $max-width) {
+    margin-left: 180px;
+  }
+}
+
+.promo__img {
+  z-index: 2;
+  margin-top: calc(20px + (120 - 20) * ((100vw - 320px) / (1600 - 320)));
+  margin-bottom: calc(20px + (90 - 20) * ((100vw - 320px) / (1600 - 320)));
+}
+
+.promo__img__preview {
   width: 100%;
   height: 100%;
-  position: relative;
-  display: grid;
-  grid-template-columns: max-content;
-  border-radius: 30px;
-  background: linear-gradient(76deg, #ff9d2d 1.66%, #ffd877 93.21%);
-  &::before {
-    content: "";
-    position: absolute;
-    z-index: 2;
-    width: 120px;
-    height: 120px;
-    top: 80px;
-    right: 0;
-    background-image: url("/images/preview/preview-promo@1x.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    @media (min-resolution: 2dppx) {
-      background-image: url("/images/preview/preview-promo@2x.png");
-    }
-    @media (min-width: $width-tablet) {
-      top: 120px;
-      margin-left: 177px;
-      margin-bottom: 120px;
-    }
-  }
-
 }
 
-.preview-text {
+.promo-text {
   position: relative;
   z-index: 2;
   color: #0b0b0b;
-  font-size: 18px;
+  font-size: calc(16px + (100 - 16) * ((100vw - 320px) / (1600 - 320)));
   font-weight: 700;
-  margin-top: 60px;
-  margin-bottom: 30px;
+  margin-bottom: calc(10px + (70 - 10) * ((100vw - 320px) / (1600 - 320)));
   text-align: left;
-  @media (min-width: $width-tablet) {
-    font-size: 100px;
-    margin-top: 182px;
+  .promo-text__second-word {
+    margin-left: calc(40px + (100 - 40) * ((100vw - 320px) / (1600 - 320)));
   }
-  .preview-text__second-word {
-    margin-left: 40px;
-    @media (min-width: $width-tablet) {
-      margin-left: 87px;
-    }
-  }
-  .preview-text__third-word {
+  .promo-text__third-word {
     position: relative;
-    padding-left: 80px;
-    @media (min-width: $width-tablet) {
-      padding-left: 294px;
-     }
+    padding-left: calc(80px + (295 - 80) * ((100vw - 320px) / (1600 - 320)));
     &::before {
       content: "";
       position: absolute;
       z-index: 2;
-      width: 75px;
+      width: calc(75px + (275 - 75) * ((100vw - 320px) / (1600 - 320)));
       height: 1px;
-      bottom: 5px;
+      bottom: calc(4px + (28 - 4) * ((100vw - 320px) / (1600 - 320)));
       left: 0;
       background-color: #000;
       opacity: 0.5;
-      @media (min-width: $width-tablet) {
-        width: 100px;
-        height: 2px;
-        width: 274px;
-        bottom: 25px;
+      @media (min-width: $max-width) {
+        width: 275px;
+        bottom: 28px;
       }
     }
     &::after {
       content: "";
       position: absolute;
       z-index: 2;
-      width: 60px;
-      height: 30px;
-      bottom: 10px;
+      width: calc(40px + (190 - 40) * ((100vw - 320px) / (1600 - 320)));
+      height: calc(30px + (130 - 30) * ((100vw - 320px) / (1600 - 320)));
+      bottom: calc(1px + (25 - 1) * ((100vw - 320px) / (1600 - 320)));
       left: 0;
-      background-image: url("/images/preview/preview-bee@1x.png");
+      background-image: url("/images/promo/promo-bee@1x.png");
       background-repeat: no-repeat;
       background-size: contain;
       @media (min-resolution: 2dppx) {
-        background-image: url("/images/preview/preview-bee@2x.png");
+        background-image: url("/images/promo/promo-bee@2x.png");
       }
-      @media (min-width: $width-tablet) {
+      @media (min-width: $max-width) {
         width: 190px;
+        height: 130px;
+        bottom: 25px;
+        padding-left: 295px;
       }
     }
+    @media (min-width: $max-width) {
+      padding-left: 295px;
+    }
+  }
+  @media (min-width: $max-width) {
+    font-size: 100px;
   }
 }
 
-.preview-links {
+.promo-links {
   display: grid;
-  gap: 30px;
+  gap: calc(10px + (30 - 10) * ((100vw - 320px) / (1600 - 320)));
   grid-template-columns: max-content max-content;
+}
+
+.promo-links__link {
+  max-width: 100%;
+  font-size: calc(8px + (16 - 8) * ((100vw - 320px) / (1600 - 320)));
+  padding: 5px 10px;
+  cursor: pointer;
+  background: #000;
+  color: #fff;
+  @media (min-width: $width-tablet) {
+    padding: 14px 40px;
+  }
+  @media (min-width: $width-desktop) {
+    padding: 18px 50px;
+  }
+}
+
+.link-learn {
+  background: inherit;
+  border: 1px solid #000;
+  color: #000;
 }
