@@ -8,12 +8,9 @@
   background: linear-gradient(76deg, #ff9d2d 1.66%, #ffd877 93.21%);
   @media (min-width: $width-tablet) {
     margin: 0 25px;
-    margin-bottom: 130px;
   }
   @media (min-width: $width-desktop) {
-    margin: 0 50px;
-  }
-  @media (min-width: $max-width) {
+    margin: 0 100px;
     border-radius: 30px;
   }
 }
@@ -26,18 +23,19 @@
   bottom: 0;
   right: 0;
   margin: auto;
-  max-width: calc(300px + (1400 - 300) * ((100vw - 320px) / (1600 - 320)));
-  max-height: calc(111px + (611 - 111) * ((100vw - 320px) / (1600 - 320)));
+  width: calc(300px + (1400 - 300) * ((100vw - 320px) / (1600 - 320)));
+  height: calc(111px + (611 - 111) * ((100vw - 320px) / (1600 - 320)));
   .promo-logo__svg {
     opacity: 1;
     fill: rgba(255, 166, 56, 0.4);
   }
   @media (min-width: $width-tablet) {
     top: -50px;
-    left: calc(10px + (70 - 10) * ((100vw - 320px) / (1600 - 320)));
   }
   @media (min-width: $width-desktop) {
     top: -70px;
+    width: 1400px;
+    height: 611px;
   }
 }
 
@@ -64,7 +62,7 @@
 
 .promo__container {
   position: relative;
-  margin-left: calc(20px + (180 - 20) * ((100vw - 320px) / (1600 - 320)));
+  margin-left: calc(20px + (140 - 20) * ((100vw - 320px) / (1600 - 320)));
   @media (min-width: $max-width) {
     margin-left: 180px;
   }

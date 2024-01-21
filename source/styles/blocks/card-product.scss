@@ -1,38 +1,72 @@
 .our-product__card-product {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: calc(10px + (30 - 10) * ((100vw - 320px) / (1600 - 320)));
 }
 
 .card-product {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  background: rgba(229, 130, 17, 0.07)
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background: rgba(229, 130, 17, 0.07);
+  @media (min-width: $width-tablet) {
+    max-width: 48%;
+  }
 }
 
 .card-product__product-info {
   display: flex;
   flex-direction: column;
   text-align: left;
-  margin-top: 45px;
-  margin-left: 30px;
+  width: 100%;
+  margin-top: calc(20px + (45 - 20) * ((100vw - 320px) / (1600 - 320)));
+  margin-left: calc(15px + (30 - 15) * ((100vw - 320px) / (1600 - 320)));
+  @media (min-width: $width-tablet) {
+    max-width: 58%;
+
+  }
 }
 .product-info__header {
-  font-size: 28px;
+  font-size: calc(8px + (28 - 8) * ((100vw - 320px) / (1600 - 320)));
   font-weight: 600;
   line-height: 145%; /* 65.25px */
-  margin-bottom: 20px;
+  margin-bottom: calc(5px + (20 - 5) * ((100vw - 320px) / (1600 - 320)));
 }
 .product-info__description {
-  font-size: 16px;
+  font-size: calc(6px + (16 - 6) * ((100vw - 320px) / (1600 - 320)));
   font-weight: 600;
   line-height: 160%; /* 35.2px */
-  margin-bottom: 30px;
+  margin-bottom: calc(10px + (30 - 10) * ((100vw - 320px) / (1600 - 320)));
 }
 .product-info__link {
   max-width: max-content;
   cursor: pointer;
-  padding: 10px 30px;
-  border: 1.5px solid #E58211;
-  color: #E58211;
+  padding: 3px 10px;
+  border: 1.5px solid #e58211;
+  color: #e58211;
+  font-size: calc(8px + (16 - 8) * ((100vw - 320px) / (1600 - 320)));
+  margin-bottom: calc(10px + (44 - 10) * ((100vw - 320px) / (1600 - 320)));
+  @media (min-width: $width-tablet) {
+    padding: 5px 20px;
+  }
+  @media (min-width: $width-desktop) {
+    padding: 10px 30px;
+    margin-bottom: 40px;
+  }
+}
+
+.card-product__product-container {
+  width: calc(90px + (180 - 90) * ((100vw - 320px) / (1600 - 320)));
+  height: calc(100px + (200 - 100) * ((100vw - 320px) / (1600 - 320)));
+  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  display: flex;
+  justify-content: end;
+}
+.card-product__img {
+  margin: 10px;
+  width: min-content;
+  height: 100%;
 }

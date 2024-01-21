@@ -57,36 +57,37 @@
       </div>
       <div class="promo__img">
         <picture>
-          <source type="image/webp"
-            srcset="images/promo/promo@1x.webp 1x, images/promo/promo@2x.webp 2x">
-          <img class="promo__img__preview" src="images/promo/promo@1x.png"
-            srcset="images/promo/promo@2x.png 2x" alt="100% honey">
+          <source type="image/webp" srcset="images/promo/promo@1x.webp 1x, images/promo/promo@2x.webp 2x">
+          <img class="promo__img__preview" src="images/promo/promo@1x.png" srcset="images/promo/promo@2x.png 2x"
+            alt="100% honey">
         </picture>
       </div>
-        <span class="promo__decor"></span>
+      <span class="promo__decor"></span>
       <svg class="promo-logo" width="1400" height="611">
         <use class="promo-logo__svg" href="images/sprite.svg#promo-logo"></use>
       </svg>
     </div>
-    <!--
+
     <section class="main-info">
       <div class="trusted-shops">
         <h2 class="trusted-shops__header">Our Trusted Shops</h2>
         <ul class="trusted-shops__list">
           <li class="trusted-shops__item">
-            <svg class="trusted-shops__logo" width="144" height="32">
+            <svg class="trusted-shops__logo trusted-shops__logo--luxottica" width="144" height="32">
               <use class="logo-luxottica" href="images/sprite.svg#logo-luxottica"></use>
             </svg>
           </li>
           <li class="trusted-shops__item">
-            <svg class="trusted-shops__logo" width="228" height="35">
+            <svg class="trusted-shops__logo trusted-shops__logo--miumiu" width="228" height="35">
               <use class="logo-miumiu" href="images/sprite.svg#logo-miumiu"></use>
             </svg>
           </li>
-          <li class="trusted-shops__item"> <svg class="trusted-shops__logo" width="205" height="30">
+          <li class="trusted-shops__item"> <svg class="trusted-shops__logo trusted-shops__logo--dunkin" width="205"
+              height="30">
               <use class="logo-dunkin" href="images/sprite.svg#logo-dunkin"></use>
             </svg></li>
-          <li class="trusted-shops__item"> <svg class="trusted-shops__logo" width="263" height="35">
+          <li class="trusted-shops__item"> <svg class="trusted-shops__logo trusted-shops__logo--burberry" width="263"
+              height="35">
               <use class="logo-burberry" href="images/sprite.svg#logo-burberry"></use>
             </svg></li>
         </ul>
@@ -95,7 +96,7 @@
       <div class="about-honey">
         <h2 class="visually-hidden">More information about honey</h2>
         <div class="about-honey__preview">
-          <div class="preview-img first-preview-img">
+          <div class="preview-img preview-img--first">
             <picture>
               <source type="image/webp"
                 srcset="images/about-honey/about-honey-one@1x.webp 1x, images/about-honey/about-honey-one@2x.webp 2x">
@@ -103,21 +104,21 @@
                 srcset="images/about-honey/about-honey-one@2x.png 2x" width="424" height="543" alt="honey,bee,flower">
             </picture>
           </div>
-          <div class="text-block">
-            <p class="text-block__header">Honey created in the laps of nature</p>
+          <div class="text-block text-block--first">
+            <p class="text-block__header">Honey created in the laps of nature.</p>
             <p class="text-block__description">Honey is one of the prime ingredients in your everyday food schedule. As
               a brand, you need a marketing strategy that will help...</p>
             <a class="text-block__link" href="index.html">Learn More</a>
           </div>
         </div>
         <div class="about-honey__preview">
-          <div class="text-block">
+          <div class="text-block text-block--second">
             <p class="text-block__header">Does your honey taste bad? Try us!</p>
             <p class="text-block__description">Honey is one of the prime ingredients in your everyday food schedule. As
               a brand, you need a marketing strategy that will help...</p>
             <a class="text-block__link" href="index.html">Learn More</a>
           </div>
-          <div class="preview-img second-preview-img">
+          <div class="preview-img preview-img--second">
             <picture>
               <source type="image/webp"
                 srcset="images/about-honey/about-honey-two@1x.webp 1x, images/about-honey/about-honey-two@2x.webp 2x">
@@ -142,14 +143,16 @@
                 has a medium amber color.</p>
               <a class="product-info__link" href="index.html">Buy Now</a>
             </div>
-            <div class="card-product__product-preview">
-              <source type="image/webp"
-                srcset="images/product-preview/eucalyptus-honey@1x.webp 1x, images/product-preview/eucalyptus-honey@2x.webp 2x">
-              <img class="product-preview__img" src="images/product-preview/eucalyptus-honey@1x.png"
-                srcset="images/product-preview/eucalyptus-honey@2x.png 2x" width="234" height="248"
-                alt="eucalyptus-honey">
+            <div class="card-product__product-container">
+              <picture>
+                <source type="image/webp"
+                  srcset="images/product-preview/eucalyptus-honey@1x.webp 1x, images/product-preview/eucalyptus-honey@2x.webp 2x">
+                <img class="card-product__img" src="images/product-preview/eucalyptus-honey@1x.png"
+                  srcset="images/product-preview/eucalyptus-honey@2x.png 2x" width="234" height="248"
+                  alt="eucalyptus-honey">
               </picture>
             </div>
+
           </div>
           <div class="card-product">
             <div class="card-product__product-info">
@@ -158,21 +161,22 @@
                 known as the Linden tree.</p>
               <a class="product-info__link" href="index.html">Buy Now</a>
             </div>
-            <div class="card-product__product-preview">
-              <source type="image/webp"
-                srcset="images/product-preview/basswood-honey@1x.webp 1x, images/product-preview/basswood-honey@2x.webp 2x">
-              <img class="product-preview__img" src="images/product-preview/basswood-honey@1x.png"
-                srcset="images/product-preview/basswood-honey@2x.png 2x" width="103" height="219"
-                alt="eucalyptus-honey">
+            <div class="card-product__product-container">
+              <picture>
+                <source type="image/webp"
+                  srcset="images/product-preview/basswood-honey@1x.webp 1x, images/product-preview/basswood-honey@2x.webp 2x">
+                <img class="card-product__img" src="images/product-preview/basswood-honey@1x.png"
+                  srcset="images/product-preview/basswood-honey@2x.png 2x" width="103" height="219"
+                  alt="eucalyptus-honey">
               </picture>
             </div>
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
   </main>
 
-  <!-- <footer class="main-footer">
+   <footer class="main-footer">
     <div class="main-footer__container">
       <a class="footer-logo" href="index.html" aria-label="Go to home page">
         <svg class="footer-logo__svg" xmlns="http://www.w3.org/2000/svg" width="66" height="29" viewBox="0 0 66 29">
@@ -213,6 +217,7 @@
           </li>
         </ul>
       </div>
+      
       <div class="mobile-app">
         <ul class="mobile-app__list">
           <li class="mobile-app__item">
@@ -233,7 +238,7 @@
         </ul>
       </div>
     </div>
-  </footer> -->
+  </footer>
 </body>
 
 </html>

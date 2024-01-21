@@ -1,25 +1,50 @@
 .trusted-shops {
   display: flex;
   flex-direction: column;
-  margin: 0 170px;
-  margin-bottom: 130px;
+  margin: 0 20px;
+  @media (min-width: $width-tablet) {
+    margin: 0 170px;
+  }
 }
 
 .trusted-shops__header {
   text-align: left;
-  font-size: 45px;
+  font-size: calc(18px + (45 - 18) * ((100vw - 320px) / (1600 - 320)));
   font-weight: 700;
   line-height: 160%; /* 72px */
-  margin-bottom: 50px;
+  margin-bottom: 10px;
+  @media (min-width: $width-tablet) {
+    margin-bottom: 25px;
+  }
+  @media (min-width: $width-desktop) {
+    font-size: 45px;
+    margin-bottom: 50px;
+  }
 }
 
 .trusted-shops__list {
-display: flex;
-justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  @media (min-width: $width-tablet) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 .trusted-shops__logo {
-  fill: #A7A7A7;
+  fill: #a7a7a7;
+  max-height: calc(15px + (35 - 15) * ((100vw - 320px) / (1600 - 320)));
+  &--luxottica {
+    max-width: calc(70px + (144 - 70) * ((100vw - 320px) / (1600 - 320)));
+  }
+  &--miumiu {
+    max-width: calc(95px + (228 - 95) * ((100vw - 320px) / (1600 - 320)));
+  }
+  &--dunkin {
+    max-width: calc(85px + (205 - 85) * ((100vw - 320px) / (1600 - 320)));
+  }
+  &--burberry {
+    max-width: calc(115px + (263 - 115) * ((100vw - 320px) / (1600 - 320)));
+  }
 }
-
-

@@ -1,10 +1,18 @@
 .our-product {
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: center;
-  max-width: 1146px;
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
-  gap: 50px;
+  margin-bottom: 20px;
+  gap: calc(20px + (50 - 20) * ((100vw - 320px) / (1600 - 320)));
+  @media (min-width: $width-tablet) {
+    max-width: 80%;
+    margin-bottom: 65px;
+  }
+  @media (min-width: $width-desktop) {
+    gap: 50px;
+    max-width: 1200px;
+    margin-bottom: 130px;
+  }
 }
 
 .our-product__container {
@@ -22,9 +30,12 @@
   background-color: transparent;
   cursor: pointer;
   color: #e58211;
-  font-size: 18px;
+  font-size: calc(8px + (18 - 8) * ((100vw - 320px) / (1600 - 320)));
   font-weight: 700;
   line-height: 160%; /* 28.8px */
   text-decoration-line: underline;
   align-self: self-end;
+  @media (min-width: $width-desktop) {
+    font-size: 18px;
+  }
 }

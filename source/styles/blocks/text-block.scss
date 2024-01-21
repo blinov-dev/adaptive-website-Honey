@@ -1,27 +1,47 @@
 .text-block {
   display: flex;
   flex-direction: column;
-  max-width: 548px;
-  margin-top: 100px;
+  max-width: calc(150px + (548 - 150) * ((100vw - 320px) / (1600 - 320)));
+  margin-top: calc(10px + (100 - 10) * ((100vw - 320px) / (1600 - 320)));
+  @media (min-width: $width-desktop) {
+    margin-top: 100px;
+    max-width: 548px;
+  }
 }
 .text-block__header {
   text-align: left;
-  font-size: 45px;
+  font-size: calc(14px + (45 - 14) * ((100vw - 320px) / (1600 - 320)));
   font-weight: 700;
   line-height: 145%; /* 65.25px */
-  margin-bottom: 30px;
+  margin-bottom: calc(10px + (30 - 10) * ((100vw - 320px) / (1600 - 320)));
+  @media (min-width: $width-desktop) {
+    font-size: 45px;
+    margin-bottom: 30px;
+  }
 }
 .text-block__description {
   text-align: left;
-  font-size: 22px;
+  font-size: calc(8px + (22 - 8) * ((100vw - 320px) / (1600 - 320)));
   font-weight: 600;
   line-height: 160%; /* 35.2px */
-  margin-bottom: 50px;
+  margin-bottom: calc(20px + (50 - 20) * ((100vw - 320px) / (1600 - 320)));
+  @media (min-width: $width-desktop) {
+    font-size: 22px;
+    margin-bottom: 50px;
+  }
 }
 .text-block__link {
   max-width: max-content;
   cursor: pointer;
-  padding: 15px 40px;
+  padding: 5px 10px;
   background: #e58311;
   color: #fff;
+  font-size: calc(8px + (16 - 8) * ((100vw - 320px) / (1600 - 320)));
+  @media (min-width: $width-tablet) {
+    padding: 10px 20px;
+  }
+  @media (min-width: $width-tablet) {
+    padding: 15px 40px;
+    font-size: 16px;
+  }
 }
