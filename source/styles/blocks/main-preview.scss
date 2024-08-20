@@ -46,12 +46,6 @@
   z-index: 2;
   width: calc(30px + (154 - 30) * ((100vw - 320px) / (1600 - 320)));
   height: calc(100px + (320 - 100) * ((100vw - 320px) / (1600 - 320)));
-  background-image: url("/images/promo/honey-spoon@1x.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  @media (min-resolution: 2dppx) {
-    background-image: url("/images/promo/honey-spoon@2x.png");
-  }
   @media (min-width: $width-tablet) {
     left: -25px;
   }
@@ -61,6 +55,7 @@
 }
 
 .promo__container {
+  z-index: 2;
   position: relative;
   margin-left: calc(20px + (140 - 20) * ((100vw - 320px) / (1600 - 320)));
   @media (min-width: $max-width) {
@@ -108,20 +103,13 @@
         bottom: 28px;
       }
     }
-    &::after {
-      content: "";
+    &--decor {
       position: absolute;
       z-index: 2;
       width: calc(40px + (190 - 40) * ((100vw - 320px) / (1600 - 320)));
       height: calc(30px + (130 - 30) * ((100vw - 320px) / (1600 - 320)));
       bottom: calc(1px + (25 - 1) * ((100vw - 320px) / (1600 - 320)));
       left: 0;
-      background-image: url("/images/promo/promo-bee@1x.png");
-      background-repeat: no-repeat;
-      background-size: contain;
-      @media (min-resolution: 2dppx) {
-        background-image: url("/images/promo/promo-bee@2x.png");
-      }
       @media (min-width: $max-width) {
         width: 190px;
         height: 130px;
